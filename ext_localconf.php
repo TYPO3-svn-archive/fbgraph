@@ -8,7 +8,6 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Profile' => 'index'
 		),
 	array(
-		'Profile' => 'index'
 		)
 	);
 
@@ -19,7 +18,6 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Feed' => 'index',
 		),
 	array(
-		'Feed' => 'index'
 		)
 	);
 
