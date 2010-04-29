@@ -1,0 +1,33 @@
+# Plugin configuration
+
+plugin.tx_fbgraph {
+	settings {
+	
+		# Facebook API auth. settings
+		# Without these settings you just get public Facebook data
+		#
+		# IMPORTANT: The Extension doesn't use auth at the moment (maybe later)
+		#
+		# auth_appID =
+		# auth_api_secret =
+		# auth_cookie = true
+		
+		# Facebook Profile name or id, its a must have!
+		api_profile = typo3
+		
+		# Set this to "0" when you didn't get any data. Some server installations doesn't support it.
+		https_connection = 1
+	}
+	view {
+		# Templates
+		templateRootPath = {$plugin.tx_fbgraph.view.templateRootPath}
+		partialRootPath = {$plugin.tx_fbgraph.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_fbgraph.view.layoutRootPath}
+	}
+}
+
+# Profile configuration
+plugin.tx_fbgraph_pi1 < plugin.tx_fbgraph
+
+# Feed configuration
+plugin.tx_fbgraph_pi2 < plugin.tx_fbgraph

@@ -1,0 +1,26 @@
+<f:layout name="default" />
+
+<f:section name="content">
+	<div>
+		<h1>Profile</h1>
+		<f:if condition="{profile}">
+			<f:then>
+				<p><img src="{profile.picture}" /></p>
+				<p>ID: {profile.id}</p>
+				<p>Name: {profile.name}</p>
+				<p>Picture: {profile.picture}</p>
+				<p>Link: {profile.link}</p>
+				<p>Category: {profile.category}</p>
+				<p>Username: {profile.username}</p>
+				<p>Founded: {profile.founded}</p>
+				<p>Company Overview: {profile.companyOverview}</p>
+				<p>Mission: {profile.mission}</p>
+				<p>Products: {profile.products}</p>
+				<p>Fan Count: {profile.fanCount}</p>
+			</f:then>
+			<f:else>
+				<p>This Profile doesn't exist.</p>
+			</f:else>
+		</f:if>	
+	</div>
+</f:section>

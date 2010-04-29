@@ -1,0 +1,61 @@
+<f:layout name="default" />
+
+<f:section name="content">
+	<div>
+		<h1>Feed</h1>
+			
+		<f:if condition="{feed}">
+			<f:then>
+				<dl>
+					<f:for each="{feed.entries}" as="entry">
+							
+							ID: {entry.id} <br />
+							
+							From Name: {entry.from.name} <br />
+							From Category: {entry.from.category} <br />
+							From ID: {entry.from.id} <br />
+						 	
+							<f:for each="{entry.to}" as="to_entry">
+								To Name: {to_entry.name} <br />
+								To Category: {to_entry.category} <br />
+								To ID: {to_entry.id} <br />
+							</f:for>
+						
+							Message: {entry.message} <br />
+							Picture: {entry.picture} <br />
+							Link: {entry.link} <br />
+							Name: {entry.name} <br />
+							Caption: {entry.caption} <br />
+							Description: {entry.description} <br />
+							Icon: {entry.icon} <br />
+							Created: {entry.createdTime} <br />
+							Updated: {entry.updatedTime} <br />
+							Likes: {entry.likes} <br />
+							
+							<f:if condition="{entry.comments}">
+								<f:then>
+									--- <br />
+								</f:then>
+							</f:if>
+							
+							<f:for each="{entry.comments}" as="comments_entry">
+								Comment ID: {comments_entry.id} <br />
+								Comment From ID: {comments_entry.from.id} <br />
+								Comment From NAME: {comments_entry.from.name} <br />
+								Comment From Category: {comments_entry.from.category} <br />
+								Comment Message: {comments_entry.message} <br />
+								Comment Created: {comments_entry.createdTime} <br />
+								---<br />
+							</f:for>
+						
+						<hr>
+						
+					</f:for>
+				</dl>
+			</f:then>
+			<f:else>
+				<p>This Feed currently doesn't contain any entries.</p>
+			</f:else>
+		</f:if>
+	</div>
+</f:section>
