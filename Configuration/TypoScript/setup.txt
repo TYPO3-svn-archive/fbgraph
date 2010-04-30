@@ -12,7 +12,8 @@ plugin.tx_fbgraph {
 		# auth_api_secret =
 		# auth_cookie = true
 		
-		# Facebook Profile name or id, its a must have!
+		# Facebook profile NAME or ID (must have!)
+		# An api_profile can be a normal user, a feed, or a user page. Everything has its profile ;-)
 		api_profile = typo3
 		
 		# Set this to "0" when you didn't get any data. Some server installations doesn't support it.
