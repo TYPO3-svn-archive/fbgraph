@@ -52,9 +52,7 @@
  * @entity
  */
 
-require_once(t3lib_extMgm::extPath('fbgraph').'class.tx_fbgraph_facebookSDK.php');
-
-class Tx_Fbgraph_Domain_Model_Facebook extends Facebook {
+class Tx_Fbgraph_Domain_Model_Facebook extends tx_fbgraph_facebookSDK {
 
    /**
    * Makes an HTTP request. This method can be overriden by subclasses if

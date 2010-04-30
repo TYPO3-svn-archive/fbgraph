@@ -74,7 +74,7 @@ class FacebookApiException extends Exception
  *
  * @author Naitik Shah <naitik@facebook.com>
  */
-class Facebook
+class tx_fbgraph_facebookSDK
 {
   /**
    * Default options for curl.
