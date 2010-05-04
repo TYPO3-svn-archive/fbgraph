@@ -58,10 +58,10 @@ class Tx_Fbgraph_Domain_Model_Feed extends Tx_Extbase_DomainObject_AbstractEntit
 	 */
 	public function grab($profile){
 		
-		// Would be nice to see some suggestions for this method
+		// Would be nice to see some suggestions for this
 		// I think there are alot of improvements possible
 
-		$facebook = new Tx_Fbgraph_Domain_Model_Facebook;
+		$facebook = t3lib_div::makeInstance('Tx_Fbgraph_Domain_Model_Facebook');
 		
 		$arg = ('/' . $profile . '/feed');
 		$rawData = $facebook->api($arg);

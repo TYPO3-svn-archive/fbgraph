@@ -109,7 +109,7 @@ class Tx_Fbgraph_Domain_Model_Profile extends Tx_Extbase_DomainObject_AbstractEn
 	 */
 	public function grab($arg){
 		
-		$facebook = new Tx_Fbgraph_Domain_Model_Facebook;
+		$facebook = t3lib_div::makeInstance('Tx_Fbgraph_Domain_Model_Facebook');
 		$rawData = $facebook->api($arg);
 			
 		$this->id = $rawData[id];
