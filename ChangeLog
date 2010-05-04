@@ -1,5 +1,6 @@
 2010-05-04 Sascha Korth  <sascha@brotherskorth.com>
 	* fixed Bug #7556
+	* some autoload fixes
 	
 2010-05-01 Sascha Korth  <sascha@brotherskorth.com>
 	* change in folder strukture

@@ -1,7 +1,7 @@
 <?php
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
-// Generates the needed ext_autoload.php file
+// Could be used to Generate an ext_autoload.php file
 //$extutil = new Tx_Extbase_Utility_Extension;
 //$extutil->createAutoloadRegistryForExtension($_EXTKEY, t3lib_extMgm::extPath($_EXTKEY));
 

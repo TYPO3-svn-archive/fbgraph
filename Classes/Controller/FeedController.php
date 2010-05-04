@@ -43,13 +43,10 @@ class Tx_Fbgraph_Controller_FeedController extends Tx_Extbase_MVC_Controller_Act
 			throw new Exception('You have to set the api_profile in your Typoscript');
 		}
 		
-		// Needs to be implemented for local problems testing
-		
 		// Needs to be set in ts if connection problems appear
-		//if( $this->settings['https_connection'] == '0' ) {
-		//	Tx_Fbgraph_Domain_Model_Facebook::$CURL_OPTS[CURLOPT_SSL_VERIFYPEER] = false;
-		//}
-		
+		if( $this->settings['https_connection'] == '0' ) {
+			Tx_Fbgraph_Domain_Model_Facebook::$CURL_OPTS[CURLOPT_SSL_VERIFYPEER] = false;
+		}
 		
 		$feed = new Tx_Fbgraph_Domain_Model_Feed;
 		$feed->grab($this->settings['api_profile']);
