@@ -28,7 +28,7 @@ plugin.tx_fbgraph {
 }
 
 # Profile configuration
-plugin.tx_fbgraph_pi1 < plugin.tx_fbgraph
+plugin.tx_fbgraph.profile < plugin.tx_fbgraph
 
 # Feed configuration
-plugin.tx_fbgraph_pi2 < plugin.tx_fbgraph
+plugin.tx_fbgraph.feed < plugin.tx_fbgraph

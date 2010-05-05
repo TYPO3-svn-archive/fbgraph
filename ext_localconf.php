@@ -8,7 +8,7 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 // Configure Facebook Profile Plugin
 Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
-	'Pi1',
+	'Profile',
 	array(	 
 		'Profile' => 'index'
 		),
@@ -19,7 +19,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 // Configure Facebook Feed Plugin
 Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
-	'Pi2',
+	'Feed',
 	array(	 
 		'Feed' => 'index',
 		),
