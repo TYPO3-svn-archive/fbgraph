@@ -99,25 +99,24 @@ class Tx_Fbgraph_Domain_Model_Feed extends Tx_Extbase_DomainObject_AbstractEntit
 				$entry->setComments($data[comments]);
 			}
 			
-			
 			// At least add all "to" profiles to our Entry
-			foreach($data[to][data] as $data){
-				
-				// We also need a new Profile Object
-				$to_profile = new Tx_Fbgraph_Domain_Model_Profile;
-				
-				// Set the "to" Profile attributes
-				$to_profile->setName($data[name]);
-				$to_profile->setCategory($data[category]);
-				$to_profile->setId($data[id]);
-				
-				$entry->addTo($to_profile);
-				
+			if(is_array($data[to][data])){
+				foreach($data[to][data] as $data){	
+					
+					// We also need a new Profile Object
+					$to_profile = new Tx_Fbgraph_Domain_Model_Profile;
+					
+					// Set the "to" Profile attributes
+					$to_profile->setName($data[name]);
+					$to_profile->setCategory($data[category]);
+					$to_profile->setId($data[id]);
+					
+					$entry->addTo($to_profile);	
+				}
 			}
 			
 			// Add this Entry to our Object Storage
-			$this->addEntry($entry);
-			
+			$this->addEntry($entry);	
 		}
 		
 	}

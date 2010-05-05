@@ -76,6 +76,15 @@ class Tx_Fbgraph_Domain_Model_Facebook extends tx_fbgraph_facebookSDK {
     curl_close($ch);
 	return $result;
   }
+  
+  /**
+   * Wee need to fill the parent constructor with an empty array as
+   * long as we didn't use auth.! Else we get an construct error. 
+   */
+  public function __construct() { 
+	$config = array();
+  	parent::__construct($config);
+  }
    
 }
 ?>
